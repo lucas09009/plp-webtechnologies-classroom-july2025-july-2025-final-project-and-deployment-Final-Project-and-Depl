@@ -1,0 +1,160 @@
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== Header & Navigation ===== */
+.header {
+  background: linear-gradient(135deg, #0057ff, #00c6ff);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd59;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* ===== Hero ===== */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: #ffdd59;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #ffdd59;
+  color: #0057ff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: #ffc107;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills .skill-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.projects .project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0057ff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    border-radius: 8px;
+  }
+  .burger {
+    display: flex;
+  }
+}
